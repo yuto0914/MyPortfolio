@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>My Portfolio</title>
+	    <!-- CSS -->
+	    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+	    <link rel="stylesheet" href="./libs/bootstrap/carousel.css">
+	    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+	    <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <!-- header -->
+        <div class="wrapper"></div>
+        <header id="header">
+            <div class="container">
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid">
+                        <h1 class="header-logo">
+                            <a href=".">MY PORTFOLIO</a>
+                        </h1>
+                        <!-- Toggler -->
+                        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-control="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- Offcanvas -->
+                        <div class="offcanvas offcanvas-end" tagindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MY PORTFOLIO</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item nav-box">
+                                        <a class="nav-link active" aria-current="page" href="#">TOP</a>
+                                    </li>
+                                    <li class="nav-item nav-box">
+                                        <a class="nav-link" aria-current="page" href="#about">ABOUT ME</a>
+                                    </li>
+                                    <li class="nav-item nav-box">
+                                        <a class="nav-link" aria-current="page" href="#works">WORKS</a>
+                                    </li>
+                                    <li class="nav-item nav-box">
+                                        <a class="nav-link" aria-current="page" href="#skills">SKILLS</a>
+                                    </li>
+                                    <li class="nav-item nav-box">
+                                        <a class="nav-link" aria-current="page" href="#contact">CONTACT</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- main -->
+        <main class="content">
+
+            <div class="mv">
+                <div class="mv-container">
+                    <p class="mv-title">MY PORTFOLIO</p>
+                    <p class="mv-text">
+                        <br class="sp-only">I want to become a Web Designer with good taste.<br>
+                    </p>
+                </div>
+            </div>
+
+            <section class="about section" id="about">
+                <div class="container">
+                    <h2 class="title">ABOUT ME</h2>
+                    <div class="row about-row">
+                        <div class="col-4 photograph1">
+                            <img src="images/photograph1.png" alt="photograph">
+                        </div>
+                        <div class="col-sm about-inner1">
+                            <h5 class="profile-title">〜Profile〜</h5>
+                            <div class="border"></div>
+                            <li class="profile-item">
+                                <p class="profile-name">NAME</p>
+                                <p class="profile-dd">　萬才 悠人 （まんさい ゆうと）</p>
+                            </li>
+
+                            <li class="profile-item">
+                                <p class="profile-name">BIRTHDAY</p>
+                                <p class="profile-dd">　2003年 9月14日（19歳）</p>
+                            </li>
+
+                            <li class="profile-item">
+                                <p class="profile-name">FROM</p>
+                                <p class="profile-dd">　岐阜県本巣市出身</p>
+                            </li>
+
+                            <li class="profile-item">
+                                <p class="profile-name">SCHOOL</p>
+                                <p class="profile-dd">　大垣日本大学高等学校 卒業<br>
+                                    　日本総合ビジネス専門学校　ITスペシャリスト学科
+                                </p>
+                            </li>
+
+                            <li class="profile-item">
+                                <p class="profile-name">HOBBY</p>
+                                <p class="profile-dd">　ドライブすること。<br>
+                                    　YouTube・TikTok・Instagramなどを観ること。<br>
+                                    　NBAの試合を観ること。<br>
+                                    　アニメを観ること。（進撃の巨人 など）<br>
+                                    　音楽を聴くこと。（RADWIMPS など）
+                                </p>
+                            </li>
+
+                            <li class="profile-item">
+                                <p class="profile-name">ASPIRING</p>
+                                <p class="profile-dd">　フロントエンジニア/Webデザイナー</p>
+                            </li>
+                        </div>
+                    </div>
+                    
+                    <h4 class="about-text">〜自己PRについて〜</h4>
+                    <div class="border"></div>
+                    <div class="row about-row">
+                        <div class="col-6 photograph2">
+                            <img src="images/photograph2.png">
+                        </div>
+                        <div class="col-sm about-inner2">
+                            <p class="profile-dd2">　私の強みは、「何事も長く続ける継続力」です。<br><br>
+                                　私は小学校4年生から高校3年生までバスケットボールをしていました。
+                                部員が少なくて練習がきつい、キャプテンでチームをまとめるのが
+                                嫌になること、怪我で半年間できなかったことなど色々なことで
+                                辞めたいと思う時期が9年間の中で何回もありました。けれど、なぜか
+                                自分の中で「辞める」ということに抵抗がありました。こんなに辛くても
+                                バスケットボールをすることが大好きだったということも勿論ありますが、
+                                一番の理由は、ここで辞めたら自分の負けだと思うことがどこかで感じる
+                                ことがあり、「逃げる」「辞める」「負ける」ということが大嫌いだった
+                                からだと思います。<br>
+                                　現在、飲食店のアルバイトで一年以上続けています。一時期、辞めたい
+                                という気持ちがありましたが現在も継続しております。何事に対しても
+                                続けることに意味があるからです。<br><br>
+                                私はこの強みを今後も活かして貴社で貢献したいです。
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="works section" id="works">
+                <div class="container">
+                    <h2 class="title">WORKS</h2>
+                    <div class="work-text">
+                        <p class="w-text">他にも取り組んだことはGitHubにまとめています。<br>
+                            ＊ただし、GitHubを整理している場合があります。
+                        </p>
+                        <button class="btn_2" onclick="location.href='#contact'">↓　GitHubのアイコンへ　↓</button>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm3 col-3 align-self-center work-inner">
+                            <div class="card border-dark">
+                                <a class="card-link" href="./work folder /web work/">
+                                <img class="card-img-top" src="images/work-title1.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">HTML / CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm3 col-3 align-self-center work-inner">
+                            <div class="card border-dark">
+                                <a class="card-link" href="./work folder /alert sample code/">
+                                    <img class="card-img-top" src="images/work-title3.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">HTML / CSS / Bootstrap5</p>
+                                </div>
+                            </div>
+                        </div>  
+
+                        <div class="col-sm3 col-3 align-self-center work-inner">
+                            <div class="card border-dark">
+                                <a class="card-link" href="./work folder /form sample code/">
+                                    <img class="card-img-top" src="images/work-title4.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">HTML / CSS / Bootstrap5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm3 col-3 align-self-center work-inner">
+                            <div class="card border-dark">
+                                <a class="card-link" href="./work folder /button sample code/">
+                                    <img class="card-img-top" src="images/work-title5.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">HTML / CSS / Bootstrap5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm3 col-3 align-self-center work-inner">
+                            <div class="card border-dark">
+                                <a class="card-link" href="./work folder /table sample code/">
+                                    <img class="card-img-top" src="images/work-title6.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">HTML / CSS / Bootstrap5</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                           
+                </div>
+            </section>
+
+            <section class="skills section" id="skills">
+                <div class="container">
+                    <h2 class="title">SKILLS</h2>
+
+                    <div class="skills-box">
+                        <p>
+                            <a class="btn btn-outline-danger" data-bs-toggle="collapse" href="#collapseContent01" role="button" aria-expanded="false" aria-controls="collapseContent01">⬇︎　学んだ言語について（１年生）　⬇︎</a>
+                        </p>
+                        <div class="collapse" id="collapseContent01">
+                            <div class="card card-body">
+                                専門学生（１年生）で学んだ言語は以下の通りです。<br><br>
+                                HTML　CSS　JavaScript　Visual Basic　Adobe Photoshop　Adobe Illustrator
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-box">
+                        <p>
+                            <a class="btn btn-outline-danger" data-bs-toggle="collapse" href="#collapseContent02" role="button" aria-expanded="false" aria-controls="collapseContent02">⬇︎　学んだ言語について（２年生）　⬇︎</a>
+                        </p>
+                        <div class="collapse" id="collapseContent02">
+                            <div class="card card-body">
+                                専門学生（2年生）で学んだ言語は以下の通りです。<br><br>
+                                HTML　CSS　JavaScript　Bootstrap5　jQuery　C#　Python　PHP
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-box">
+                        <p>
+                            <a class="btn btn-outline-danger" data-bs-toggle="collapse" href="#collapseContent03" role="button" aria-expanded="false" aria-controls="collapseContent02">⬇︎　資格・免許について　⬇︎</a>
+                        </p>
+                        <div class="collapse" id="collapseContent03">
+                            <div class="card card-body">
+                                私が現在取得している資格・免許は合計４つです。<br><br>
+                                MOS Excel2019<br>
+                                MOS Word2019<br>
+                                Webクリエイター能力認定試験エキスパート<br>
+                                普通自動車第一種運転免許<br><br>
+                                ※今年中にITパスポート試験・基本情報技術者試験などを一つでも多く取得することが目標です。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <h2 class="title">CONTACT</h2>
+                    <p class="contact-text">
+                        お問い合わせ等は、下のアイコンからお願いいたします。<br>
+                    </p>
+                </div>
+            </section>
+        </main>
+        <!-- /main -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <!-- ナビゲーション -->
+                    <ul class="nav justify-content-center mb-3">
+                        <a class="nav-link" href="https://line.me/ti/p/SCnETCzw4_">
+                            <i class="bi bi-line"></i>
+                        </a>
+                        <a class="nav-link" href="https://www.instagram.com/yuto14__.xx">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a class="nav-link" href="mailto:mansai-y2231@scholl.ac.jp">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                        <a class="nav-link" href="https://gist.github.com/yuto0914">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </ul>
+                    <!-- /ナビゲーション -->
+                    <p>
+                        <small class="footer__small">&copy; MANSAI YUTO</small>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- マウスポインターの設定コード -->
+        <div id="mouse-stalker"></div>
+
+        <!-- JavaScript -->
+	    <script src="./libs/jquery/jquery-3.6.1.min.js"></script>
+	    <script src="./libs/bootstrap/bootstrap.min.js"></script>
+	    <script src="./main.js"></script>
+    </body>
+</html>

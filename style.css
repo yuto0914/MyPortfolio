@@ -1,0 +1,404 @@
+/* CSS */
+@charset "UTF-8";
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* 基本設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+body {
+    font-family: "Montserrat", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    color: #333;
+    margin-right: auto;
+    margin-left: auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    border-style: none;
+}
+.pc-only {
+    display: block;
+}
+.sp-only {
+    display: none;
+}
+.wrapper {
+    padding-top: 180px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* リンク設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover {
+    color: #ffffff;
+}
+.footer-item {
+    list-style:none;
+}
+
+section#about {
+    display: block;
+    padding-top: 180px;
+    margin-top: -180px;
+}
+section#works {
+    display: block;
+    padding-top: 180px;
+    margin-top: -180px;
+}
+section#skills {
+    display: block;
+    padding-top: 180px;
+    margin-top: -180px;
+}
+section#contact {
+    display: block;
+    padding-top: 180px;
+    margin-top: -180px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* タイトル設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.title {
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #a5a3a0;
+    border-bottom: solid 4px #ff00993d;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* header設定 */
+/*--------------------------------------------------------------------------------------------------------------------*/
+#header{
+    position: fixed;
+    top:0;
+    z-index: 999;
+    width:100%;
+    height: 85px;
+    background-color:rgba(212, 163, 115, 1);
+}
+.header .container {
+    display: flex;
+    padding: 20px 40px;
+}
+.header-logo {
+    font-size: 25px;
+    padding: 18px;
+}
+.offcanvas-body {
+    text-align: center;
+    font-size: large;
+}
+.nav-box {
+    margin-bottom: 30px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* mv設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.mv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    text-align: center;
+    margin-bottom: 200px;
+}
+.mv-title {
+    font-size: 45px;
+    font-weight: bold;
+}
+.mv-text {
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* about me設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.about-row {
+    display: grid;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+}
+.photograph1 {
+    width: 80%;
+    margin-right: 50px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+.photograph2 {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+.about-inner1 {
+    font-size: small;
+    display: block;
+    margin-top: 50px;
+}
+.profile-title {
+    color:#a5a3a0;
+}
+.profile-item {
+    margin-top: 0;
+    list-style: none;
+}
+.profile-name {
+    color: #ff0099c3;
+    margin-bottom: 5px;
+}
+.profile-dd {
+    margin-bottom: 15px;
+}
+.about-text {
+    text-align: center;
+    color:#a5a3a0;
+}
+.about-inner2 {
+    font-size: xx-small;
+    display: block;
+    margin: 0 auto;
+}
+.profile-dd2 {
+    padding-top: 50px;
+    margin-bottom: 15px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* work設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.w-text {
+    text-align: center;
+    font-size: small;
+}
+.btn_2 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-bottom: 50px;
+    text-decoration: none;
+}
+.work-inner {
+    width: 100%;
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* skills設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.skills  {
+    display: flex;
+    margin-bottom: 70px;
+}
+.border {
+    margin-bottom: 10px;
+}
+.skills-box {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.card-body {
+    text-align: center;
+    font-size: small;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* contact設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.contact {
+    text-align: center;
+    margin-bottom: 49px;
+}
+.contact-text {
+    font-size: xx-small;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* footer設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.footer {
+    background-color: rgba(212, 163, 115, 1);
+    color: #fff;
+    text-align: center;
+    height: 90px;
+}
+.footer_inner {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+}
+.nav-link {
+    color: white;
+    text-decoration:underline;
+    padding-bottom: 2px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 600px){
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* マウスポインターの設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+#mouse-stalker {
+    pointer-events: none;
+    position: fixed;
+    top: -30px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid hsla(324, 100%, 49%, 0.318);
+    transform: translate(0,0);
+    transition: transform 0.2s;
+    transition-timing-function: ease-out;
+    z-index: 999;
+}
+@media (min-width: 930px) {
+    #mouse-stalker {
+      display: block;
+    }
+}
+#mouse-stalker.is_active {
+    top: -45px;
+    left: -45px;
+    width: 90px;
+    height: 90px;
+    transition: 0.4s;
+    opacity: 0.5;
+    border: 2px solid #ff0099c9;
+    background: none;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* header設定 */
+/*--------------------------------------------------------------------------------------------------------------------*/
+#header{
+    height: 140px;
+}
+.header-logo {
+    font-size: 45px;
+    padding: 30px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* mv設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.mv {
+    height: 70vh;
+    margin-bottom: 130px;
+}
+.mv-container {
+    padding: 0 40px;
+}
+.mv-title {
+    font-size: 65px;
+}
+.mv-text {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* about me設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.about-row {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-bottom: 80px;
+}
+.photograph1 {
+    width: 35%;
+    margin-left: 30px;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+.about-inner1 {
+    font-size: 13px;
+    margin-left: 50px;
+}
+.profile-item {
+    margin-top: 0;
+    list-style: none;
+}
+.profile-name {
+    color: #ff0099c3;
+    margin-bottom: 5px;
+}
+.profile-dd {
+    margin-bottom: 15px;
+}
+.about-text {
+    text-align: center;
+    color:#a5a3a0;
+    margin-top: 50px;
+}
+.photograph2 {
+    width: 40%;
+    display: block;
+    margin: 30px auto auto 30px;
+}
+.about-inner2 {
+    margin-bottom: 50px;
+    font-size: small;
+}
+.profile-dd2 {
+    margin-bottom: 15px;
+    margin: 0 auto;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* works設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Bootstrapでコーディング */
+.w-text {
+    text-align: center;
+    font-size: large;
+}
+.work-inner {
+    width: 60%;
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* skills設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.skills  {
+    display: flex;
+    margin-bottom: 70px;
+}
+.border {
+    margin-bottom: 10px;
+}
+.skills-box {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.card-body {
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* contact設定コード */
+/*--------------------------------------------------------------------------------------------------------------------*/
+.contact-text {
+    font-size: large;
+}
+}
