@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>My Portfolio</title>
+	    <!-- CSS -->
+	    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+	    <link rel="stylesheet" href="./libs/bootstrap/carousel.css">
+	    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+	    <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <!-- header -->
+        <div class="wrapper"></div>
+        <header id="header">
+            <div class="container">
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid">
+                        <h1 class="header-logo">
+                            <a href=".">MY PORTFOLIO</a>
+                        </h1>
+                        <!-- Toggler -->
+                        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-control="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- Offcanvas -->
+                        <div class="offcanvas offcanvas-end" tagindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MY PORTFOLIO</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../button sample code/index.html">BUTTON WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../form sample code/index.html">FORM WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../table sample code/index.html">TABLE WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../web work/index.html">WEB WORK</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- /header -->
+
+        <main class="content">
+            <section class="main-inner" id="main-inner">
+                <div class="container">
+                    <div class="area1">
+                        <div class="group1">
+                            <h1 class="title1">基本的なコンポーネントについて　〜アラート〜</h1>
+                            <p>　Bootstrapのアラートは、エラーメッセージなどWebサイトからユーザーへのフィードバックメッセージを表示するためのコンポーネントです。</p>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜基本的な使用例｜</h3>
+                            <p>　メッセージの枠となる親要素にalertクラスおよびalert-{色の種類}クラスを追加することで、アラートを作成できます。色の種類にはprimary（青）、secondary（グレー）などコンテクストに対応した色の種類が入ります。またアクセシビリティへの配慮として属性role="alert"を追加し、スクリーンリーダーなどの支援技術にこのコンポーネントの役割がアラートであることを伝えます(図1-1)。</p>
+                            <p>　▼図1-1 アラートの基本的な使用例</p>
+                            <div class="images">
+                                <img src="./images/alert1.png" alt="alert1">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-1　｜
+
+&lt;div class="container"&gt;
+    &lt;div class="alert alert-primary" role="alert"&gt;alert-primary&lt;/div&gt;
+    &lt;div class="alert alert-secondary" role="alert"&gt;alert-secondary&lt;/div&gt;
+    &lt;div class="alert alert-success" role="alert"&gt;alert-success&lt;/div&gt;
+    &lt;div class="alert alert-danger" role="alert"&gt;alert-danger&lt;/div&gt;
+    &lt;div class="alert alert-warning" role="alert"&gt;alert-warning&lt;/div&gt;
+    &lt;div class="alert alert-info" role="alert"&gt;alert-info&lt;/div&gt;
+    &lt;div class="alert alert-light" role="alert"&gt;alert-light&lt;/div&gt;
+    &lt;div class="alert alert-dark" role="alert"&gt;alert-dark&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜リンクの色｜</h3>
+                            <p>　アラート内のa要素にalert-linkクラスを追加することで、リンク箇所の文字色を背景色に適した色や太さで表示し、より読みやすくすることができます(図1-2)。</p>
+                            <p>　▼図1-2 アラート内のリンク色</p>
+                            <div class="images">
+                                <img src="./images/alert2.png" alt="alert2">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-2　｜
+
+&lt;div class="container"&gt;
+    &lt;div class="alert alert-primary" role="alert"&gt;
+        alert-primary内の&lt;a href="#" class="alert-link"&gt;リンク #06357a&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="alert alert-secondary" role="alert"&gt;
+        alert-secondary内の&lt;a href="#" class="alert-link"&gt;リンク #34383c&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="alert alert-success" role="alert"&gt;
+        alert-success内の&lt;a href="#" class="alert-link"&gt;リンク #0c4128&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="alert alert-danger" role="alert"&gt;
+        alert-danger内の&lt;a href="#" class="alert-link"&gt;リンク #04414d&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="alert alert-warning" role="alert"&gt;
+        alert-warning内の&lt;a href="#" class="alert-link"&gt;リンク #523e02&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="alert alert-info" role="alert"&gt;
+        alert-info内の&lt;a href="#" class="alert-link"&gt;リンク #6a1a21&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="alert alert-light" role="alert"&gt;
+        alert-light内の&lt;a href="#" class="alert-link"&gt;リンク #4f5050&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="alert alert-dark" role="alert"&gt;
+        alert-dark内の&lt;a href="#" class="alert-link"&gt;リンク #101214&lt;/a&gt;
+    &lt;/div&gt;                                
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜アラート内にコンテンツを追加する｜</h3>
+                            <p>　アラート内には、見出し、段落、区切りなどさまざまなコンテンツを追加することができます。h4要素にalert-headingクラスを追加して、アラートの見出しとして設定しています。なおp要素にSpacingユーティリティのmb-0クラスを追加することで、下マージンを0にして余分な余白を削除しています。(図1-3)。</p>
+                            <p>　▼図1-3 アラート内にコンテンツを追加する</p>
+                            <div class="images">
+                                <img src="./images/alert3.png" alt="alert3">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-3　｜
+
+&lt;div class="container"&gt;
+    &lt;div class="alert alert-success" role="alert"&gt;
+        &lt;h4 class="alert-heading"&gt;アラートの見出し(h4)&lt;/h4&gt;&lt;!-- 見出し --&gt;
+        &lt;p&gt;アラート内の段落(p)&lt;/p&gt;&lt;!-- 段落 --&gt;
+        &lt;hr&gt;&lt;!-- 区切り --&gt;
+        &lt;p class="mb-0"&gt;アラート内の段落(p)&lt;/p&gt;&lt;!-- 段落 --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                        </div>    
+
+                        <div class="group2">
+                            <h3 class="title2">｜アラートを閉じる｜</h3>
+                            <p>　表示されたアラートを閉じるには、alertクラスが設定された要素に、alert-dismissibleクラスを追加します。アラートを閉じるボタンは、button要素にClose buttonコンポーネントのbtn-closeクラスを追加して作成します。また、JavaScript経由でアラートを閉じる機能を有効化するために、data-bs-dismiss="alert"を加えます。アラートを閉じる拳動をアニメーション化したい場合は、alertクラスが設定された要素にfadeクラスおよびshowクラスも追加します(図1-4)。</p>
+                            <p>　▼図1-4 アラートを閉じる</p>
+                            <div class="images">
+                                <img src="./images/alert4.png" alt="alert3">
+                                <pre><code>｜　HTMLサンプルコード 1-4　｜
+
+&lt;div class="container"&gt;
+    &lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+        右側の「×」マークをクリックするとアラートが閉じます
+        &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;/div&gt;                                
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="." class="btn">↑　PAGE TOP　↑</a>
+                </div>
+            </section>
+        </main>
+        
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <!-- ナビゲーション -->
+                    <ul class="nav justify-content-center mb-3">
+                        <a class="nav-link" href="https://line.me/ti/p/SCnETCzw4_">
+                            <i class="bi bi-line"></i>
+                        </a>
+                        <a class="nav-link" href="https://www.instagram.com/yuto14__.xx">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a class="nav-link" href="mailto:mansai-y2231@scholl.ac.jp">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                        <a class="nav-link" href="https://gist.github.com/yuto0914">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </ul>
+                    <!-- /ナビゲーション -->
+                    <p>
+                        <small class="footer__small">&copy; MANSAI YUTO</small>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- マウスポインターの設定コード -->
+        <div id="mouse-stalker"></div>
+
+        <!-- JavaScript -->
+	    <script src="./libs/jquery/jquery-3.6.1.min.js"></script>
+	    <script src="./libs/bootstrap/bootstrap.min.js"></script>
+	    <script src="./main.js"></script>
+    </body>
+</html>

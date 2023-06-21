@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>My Portfolio</title>
+	    <!-- CSS -->
+	    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+	    <link rel="stylesheet" href="./libs/bootstrap/carousel.css">
+	    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+	    <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <!-- header -->
+        <div class="wrapper"></div>
+        <header id="header">
+            <div class="container">
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid">
+                        <h1 class="header-logo">
+                            <a href=".">MY PORTFOLIO</a>
+                        </h1>
+                        <!-- Toggler -->
+                        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-control="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- Offcanvas -->
+                        <div class="offcanvas offcanvas-end" tagindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MY PORTFOLIO</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../alert sample code/index.html">ALERT WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../button sample code/index.html">BUTTON WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../form sample code/index.html">FORM WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../web work/index.html">WEB WORK</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- /header -->
+
+        <main class="content">
+            <section class="main-inner" id="main-inner">
+                <div class="container">
+                    <div class="area1">
+                        <div class="group1">
+                            <h1 class="title1">基本的なコンポーネントについて　〜テーブル〜</h1>
+                            <p>　table要素は、カレンダーや日付選択ツールなどのサードパーティのウィジェットでも広く使用されています。そのため、Bootstrapでのテーブルスタイルはオプトイン(明示的に許諾する方法)で使えるように設計されています。任意のtable要素に対してオプトインでtableクラスを追加してから、さまざまな定義済みクラスを加えてバリエーションを拡張していきます。</p>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜テーブルの基本スタイリング｜</h3>
+                            <p>　table要素にtableクラスを追加して、Bootstrapでの基本的なテーブルをスタイリングします(図1-1)。ネストされたテーブルでも、個々のテーブルに独立したスタイルが適用されます。</p>
+                            <p>　▼図1-1 テーブルの基本スタイリング</p>
+                            <div class="images">
+                                <img src="./images/table1.png" alt="table1">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-1　｜
+
+&lt;div class="container"&gt;
+    &lt;table class="table"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜暗色テーブル｜</h3>
+                            <p>　tableクラスが設定されたtable要素にtable-darkクラスを追加することで、表示の明暗を反転させることができます(図1-2)。</p>
+                            <p>　▼図1-2 暗色テーブル</p>
+                            <div class="images">
+                                <img src="./images/table2.png" alt="table2">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-2　｜
+
+&lt;div class="container"&gt;
+    &lt;table class="table table-dark"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜テーブルヘッドのオプション｜</h3>
+                            <p>　thead要素にtable-darkクラス、table-lightクラスを追加して、thead要素の表示色の明暗の変更することができます(図1-3)。</p>
+                            <p>　▼図1-3 table-darkクラスとtable-lightクラス</p>
+                            <div class="images">
+                                <img src="./images/table3.png" alt="table3">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-3　｜
+
+&lt;div class="container"&gt; 
+    &lt;!-- 「table-light」 --&gt;        
+    &lt;table class="table"&gt;
+        &lt;thead class="table-light"&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;!-- 「table-dark」 --&gt;
+    &lt;table class="table"&gt;
+        &lt;thead class="table-dark"&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜縞模様のテーブル｜</h3>
+                            <p>　tableクラスが設定されたtable要素にtable-stripedクラスを追加して、テーブルを縞模様にすることができます(図1-4)。</p>
+                            <p>　▼図1-4 table-stripedクラスを使用した縞模様のテーブル</p>
+                            <div class="images">
+                                <img src="./images/table4.png" alt="table4">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-4　｜
+
+&lt;div class="container"&gt;
+    &lt;table class="table table-striped"&gt;
+        &lt;thead class="table-light"&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜罫線付きのテーブル｜</h3>
+                            <p>　tableクラスが設定されたtable要素にtable-borderedクラスを追加して、テーブルに罫線を表示することができます(図1-5)。</p>
+                            <p>　▼図1-5 table-borderedクラスを使用した罫線付きのテーブル</p>
+                            <div class="images">
+                                <img src="./images/table5.png" alt="table5">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-5　｜
+
+&lt;div class="container"&gt;
+    &lt;table class="table table-bordered"&gt;
+        &lt;thead class="table-light"&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        
+                        <div class="group2">
+                            <h3 class="title2">｜罫線なしのテーブル｜</h3>
+                            <p>　tableクラスが設定されたtable要素にtable-borderlessクラスを追加すると、罫線なしのテーブルになります(図1-6)。</p>
+                            <p>　▼図1-6 table-borderlessクラスを使用した罫線なしのテーブル</p>
+                            <div class="images">
+                                <img src="./images/table6.png" alt="table6">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-6　｜
+
+&lt;div class="container"&gt;
+    &lt;table class="table table-borderless"&gt;
+        &lt;thead class="table-light"&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜テーブル行のマウスオーバー表示｜</h3>
+                            <p>　tableクラスが設定されたtable要素にtable-hoverクラスを追加して、tbody要素内のテーブル行にマウスオーバー表示を設定することができます(図1-7)。</p>
+                            <p>　▼図1-7 table-hoverクラスを使用したマウスオーバー表示</p>
+                            <div class="images">
+                                <img src="./images/table7.png" alt="table7">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-7　｜
+
+&lt;div class="container"&gt;
+    &lt;table class="table table-hover"&gt;
+        &lt;thead class="table-light"&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜テーブルのコンパクト化｜</h3>
+                            <p>　tableクラスが設定されたtable要素にtable-smクラスを追加して、セルのパディングサイズを小さくし、テーブルをコンパクト化することができます(図1-8)。</p>
+                            <p>　▼図1-8 table-smクラスを使用したコンパクトなテーブル</p>
+                            <div class="images">
+                                <img src="./images/table8.png" alt="table8">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-8　｜
+
+&lt;div class="container"&gt;
+    &lt;table class="table table-sm"&gt;
+        &lt;thead class="table-light"&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜テーブル行・セルの色付け｜</h3>
+                            <p>　テーブル行やセルの要素に背景色を指定するクラスを追加して、色付けを行うことができます。背景色の濃淡に応じて、適切な文字色も設定されます。テーブル行に色付けを行う場合は、tr要素に背景色用クラスを追加します(図1-9)。</p>
+                            <p>　▼図1-9 テーブル行に色をつける</p>
+                            <div class="images">
+                                <img src="./images/table9.png" alt="table9">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-9　｜
+
+&lt;div class="container"&gt; 
+    &lt;table class="table"&gt;
+        &lt;thead&gt;         
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;背景色用のクラス&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;!-- 背景色：なし --&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;なし (標準)&lt;/th&gt;
+                ・・・中略・・・
+            &lt;/tr&gt;
+            &lt;!-- 背景色：Primary --&gt;
+            &lt;tr class="table-primary"&gt;
+                &lt;th scope="row"&gt;table-primary&lt;/th&gt;
+                ・・・中略・・・
+            &lt;/tr&gt;
+            &lt;!-- 背景色：Secondary --&gt;
+            &lt;tr class="table-secondary"&gt;
+                &lt;th scope="row"&gt;table-secondary&lt;/th&gt;
+                ・・・中略・・・
+            &lt;/tr&gt;
+            &lt;!-- 背景色：Success --&gt;
+            &lt;tr class="table-success"&gt;
+                &lt;th scope="row"&gt;table-success&lt;/th&gt;
+                ・・・中略・・・
+            &lt;/tr&gt;
+            &lt;!-- 背景色：Danger --&gt;
+            &lt;tr class="table-danger"&lt;
+                &lt;th scope="row"&gt;table-danger&lt;/th&gt;
+                ・・・中略・・・
+            &lt;/tr&gt;
+            &lt;!-- 背景色：Warning --&gt;
+            &lt;tr class="table-warning"&gt;
+                &lt;th scope="row"&gt;table-warning&lt;/th&gt;
+                ・・・中略・・・
+            &lt;/tr&gt;
+            &lt;!-- 背景色：Info --&gt;
+            &lt;tr class="table-info"&gt;
+                &lt;th scope="row"&gt;table-info&lt;/th&gt;
+                ・・・中略・・・
+            &lt;/tr&gt;
+            &lt;!-- 背景色：Light --&gt;
+            &lt;tr class="table-light"&gt;
+                &lt;th scope="row"&gt;table-light&lt;/th&gt;
+                ・・・中略・・・
+            &lt;/tr&gt;
+            &lt;!-- 背景色：Dark --&gt;
+            &lt;tr class="table-dark"&gt;
+                &lt;th scope="row"&gt;table-dark&lt;/th&gt;
+                ・・・中略・・・
+            &lt;/tr&gt;  
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜個々のセルに色を付ける｜</h3>
+                            <p>　個々のセルに色付けを行う場合は、th要素またはtd要素に背景色用クラスを追加します(図1-10)。</p>
+                            <p>　▼図1-10 個々のセルに色を付ける</p>
+                            <div class="images">
+                                <img src="./images/table10.png" alt="table10">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-10　｜
+
+&lt;div class="container"&gt;
+    &lt;table class="table"&gt;
+        &lt;tr&gt;
+            &lt;th colspan="2"&gt;th (標準)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;!-- 背景色 : Primary --&gt;
+            &lt;td class="table-primary"&gt;td.table-primary&lt;/td&gt;
+            &lt;!-- 背景色 : Secondary --&gt;
+            &lt;td class="table-secondary"&gt;td.table-secondary&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;!-- 背景色 : Success --&gt;
+            &lt;td class="table-success"&gt;td.table-success&lt;/td&gt;
+            &lt;!-- 背景色 : Danger --&gt;
+            &lt;td class="table-danger"&gt;td.table-danger&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;!-- 背景色 : Warning --&gt;
+            &lt;td class="table-warning"&gt;td.table-warning&lt;/td&gt;
+            &lt;!-- 背景色 : Info --&gt;
+            &lt;td class="table-info"&gt;td.table-info&lt;/td&gt;
+        &lt;/tr&gt;
+            &lt;!-- 背景色 : Light --&gt;
+            &lt;td class="table-light"&gt;td.table-light&lt;/td&gt;
+            &lt;!-- 背景色 : Dark --&gt;
+            &lt;td class="table-dark"&gt;td.table-dark&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜テーブル行・セルのアクティブ表示する｜</h3>
+                            <p>　テーブルにあるいはセルを強調表示したいときは、table-activeクラスをtr要素あるいはth要素・td要素に追加します(図1-11)。</p>
+                            <p>　▼図1-11 テーブル行/セルをアクティブ表示する</p>
+                            <div class="images">
+                                <img src="./images/table11.png" alt="table11">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-11　｜
+
+&lt;div class="container"&gt;
+    &lt;table class="table table-info"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+                &lt;th scope="col"&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr class="table-active"&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;見出しセル&lt;/th&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+                &lt;td class="table-active"&gt;データセル&lt;/td&gt;
+                &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                    </div>
+                    <a href="." class="btn">↑　PAGE TOP　↑</a>
+                </div>
+            </section>
+        </main>
+        
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <!-- ナビゲーション -->
+                    <ul class="nav justify-content-center mb-3">
+                        <a class="nav-link" href="https://line.me/ti/p/SCnETCzw4_">
+                            <i class="bi bi-line"></i>
+                        </a>
+                        <a class="nav-link" href="https://www.instagram.com/yuto14__.xx">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a class="nav-link" href="mailto:mansai-y2231@scholl.ac.jp">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                        <a class="nav-link" href="https://gist.github.com/yuto0914">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </ul>
+                    <!-- /ナビゲーション -->
+                    <p>
+                        <small class="footer__small">&copy; MANSAI YUTO</small>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- マウスポインターの設定コード -->
+        <div id="mouse-stalker"></div>
+
+        <!-- JavaScript -->
+	    <script src="./libs/jquery/jquery-3.6.1.min.js"></script>
+	    <script src="./libs/bootstrap/bootstrap.min.js"></script>
+	    <script src="./main.js"></script>
+    </body>
+</html>

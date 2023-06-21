@@ -1,0 +1,180 @@
+/* CSS */
+@charset "UTF-8";
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* 基本設定コード */
+.wrapper {
+    padding-top: 180px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* header設定 */
+#header{
+    position: fixed;
+    top:0;
+    z-index: 999;
+    width:100%;
+    height: 100px;
+    background-color:rgba(212, 163, 115, 1);
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.1);
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.header-logo {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-right: 20px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    padding: 25px;
+}
+.nav-item {
+    padding-bottom: 30px;
+    display: block;
+    list-style: none;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* リンク設定コード */
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover {
+    color: #ffffff;
+}
+.btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #ff00993d;
+    border-radius: 5px;
+    padding-top: 10px;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* content 設定コード*/
+.area1 {
+    display: grid;
+}
+.group1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.group2 {
+    margin-bottom: 50px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* images設定コード*/
+img {
+    max-width: 100%;
+    height: auto;
+    border: solid 3px #777777;
+    display: block;
+    margin: 0 auto;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* pre設定コード */
+pre {
+    margin: 1em 0; /* ブロック前後の余白 */
+    padding: 1em; /* ブロック内の余白 */
+    border-radius: 5px; /* 角丸 */
+    background: #4b4b4a; /* 背景色 */
+    color: #fff; /* 文字色 */
+    white-space: pre-wrap; /* はみ出たときに折り返す */
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* footer設定コード */
+.footer {
+    background-color: rgba(212, 163, 115, 1);
+    color: #fff;
+    text-align: center;
+    height: 90px;
+}
+.footer_inner {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+}
+.nav-link {
+    color:#fff;
+    text-decoration:underline;
+    padding-bottom: 2px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 600px){
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* header設定 */
+#header{
+    position: fixed;
+    top:0;
+    z-index: 999;
+    width:100%;
+    height: 140px;
+    background-color:rgba(212, 163, 115, 1);
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.1);
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.header-logo {
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-right: 20px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    padding: 30px;
+}
+.nav-item {
+    padding-bottom: 30px;
+    display: block;
+    list-style: none;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* マウスポインターの設定コード */
+#mouse-stalker {
+    pointer-events: none;
+    position: fixed;
+    top: -30px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid hsla(324, 100%, 49%, 0.318);
+    transform: translate(0,0);
+    transition: transform 0.2s;
+    transition-timing-function: ease-out;
+    z-index: 999;
+}
+@media (min-width: 930px) {
+    #mouse-stalker {
+      display: block;
+    }
+}
+#mouse-stalker.is_active {
+    top: -45px;
+    left: -45px;
+    width: 90px;
+    height: 90px;
+    transition: 0.4s;
+    opacity: 0.5;
+    border: 2px solid #ff0099c9;
+    background: none;
+}
+}

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>My Portfolio</title>
+	    <!-- CSS -->
+	    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+	    <link rel="stylesheet" href="./libs/bootstrap/carousel.css">
+	    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+	    <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <!-- header -->
+        <div class="wrapper"></div>
+        <header id="header">
+            <div class="container">
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid">
+                        <h1 class="header-logo">
+                            <a href=".">MY PORTFOLIO</a>
+                        </h1>
+                        <!-- Toggler -->
+                        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-control="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- Offcanvas -->
+                        <div class="offcanvas offcanvas-end" tagindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MY PORTFOLIO</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../alert sample code/index.html">ALERT WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../button sample code/index.html">BUTTON WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../table sample code/index.html">TABLE WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../web work/index.html">WEB WORK</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- /header -->
+
+        <main class="content">
+            <section class="main-inner" id="main-inner">
+                <div class="container">
+                    <div class="area1">
+                        <div class="group1">
+                            <h1 class="title1">基本的なコンポーネントについて　〜フォーム〜</h1>
+                            <p>　Bootstrapのフォームは、リブートで設定されたフォームのスタイルを拡張し、一貫性のあるスタイルの入力コントロールやレイアウトを作成するためのコンポーネントです。</p>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜基本的な使用例｜</h3>
+                            <p>　まずは、input要素やselect要素、textarea要素などで作成された入力コントロールの例を見てみましょう(図1-1)。</p>
+                            <p>　▼図1-1 基本的な使用例</p>
+                            <div class="images">
+                                <img src="./images/form1.png" alt="form1">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-1　｜
+
+&lt;div class="container"&gt;
+    &lt;form&gt;
+        &lt;!-- メールアドレス入力 --&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label class="form-label" for="email1"&gt;メールアドレス&lt;/label&gt;
+            &lt;input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="メールアドレスを入力"&gt;
+            &lt;small id="emailHelp" class="form-text text-muted"&gt;あなたに関する個人情報を収集することはありません。&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;!-- パスワード入力 --&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label class="form-label" for="password1"&gt;パスワード&lt;/label&gt;
+            &lt;input type="password" class="form-control" id="password1" placeholder="パスワードを入力"&gt;
+        &lt;/div&gt;
+        &lt;!-- プルダウンメニュー --&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label class="form-label" for="select1"&gt;プルダウンメニュー&lt;/label&gt;
+            &lt;select class="form-select" id="select1"&gt;
+                &lt;option&gt;1&lt;/option&gt;
+                &lt;option&gt;2&lt;/option&gt;
+                &lt;option&gt;3&lt;/option&gt;
+                &lt;option&gt;4&lt;/option&gt;
+                &lt;option&gt;5&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;!-- 複数選択のプルダウンメニュー --&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label class="form-label" for="select2"&gt;複数選択のプルダウンメニュー&lt;/label&gt;
+            &lt;select multiple class="form-select" id="select2"&gt;
+                &lt;option&gt;1&lt;/option&gt;
+                &lt;option&gt;2&lt;/option&gt;
+                &lt;option&gt;3&lt;/option&gt;
+                &lt;option&gt;4&lt;/option&gt;
+                &lt;option&gt;5&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;!-- 複数行のテキスト入力欄 --&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label class="form-label" for="textarea1"&gt;複数行のテキスト入力欄&lt;/label&gt;
+            &lt;textarea class="form-control" id="textarea1" rows="3"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;!-- ファイル選択 --&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label class="form-label" for="file1"&gt;ファイルを選択&lt;/label&gt;
+            &lt;input type="file" class="form-control" id="file1"&gt;
+        &lt;/div&gt;
+        &lt;!-- チェックボックス --&gt;
+        &lt;div class="form-check mb-3"&gt;
+            &lt;input type="checkbox" class="form-check-input" id="check1"&gt;
+            &lt;label class="form-check-label" for="check1"&gt;チェックする&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;!-- 送信ボタン --&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;送信&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜入力コントロールのサイズを調整する｜</h3>
+                            <p>　入力コントロールの高さを大きくする場合は、form-controlクラスが設定された要素form-control-lgクラスを追加します。小さくする場合はform-control-smクラスを追加します(図1-2)。form-controlクラスでなくform-selectクラスを指定するプルダウンメニューでは、別のクラスサイズを調整します。</p>
+                            <p>　▼図1-2 入力コントロールのサイズを調整する</p>
+                            <div class="images">
+                                <img src="./images/form2.png" alt="form2">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-2　｜
+
+&lt;div class="container"&gt;
+    &lt;label class="form-label" for="input1"&gt;大サイズのテキスト入力&lt;/label&gt;
+    &lt;input class="form-control form-control-lg" id="input1" type="text" placeholder="form-control-lg"&gt;
+    &lt;label class="form-label" for="input2"&gt;標準サイズのテキスト入力欄&lt;/label&gt;
+    &lt;input class="form-control" id="input2" type="text" placeholder="Default size"&gt;
+    &lt;label class="form-label" for="input3"&gt;小サイズのテキスト入力&lt;/label&gt;
+    &lt;input class="form-control" id="input3" type="text" placeholder="form-control-sm"&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜読み取り専用のテキストを表示する｜</h3>
+                            <p>　入力コントロールにreadonly属性を追加すると、入力値の変更ができない読み取り専用のテキストを表示できます。読み取り専用入力コントロールは、無効状態でない通常のテキストで表示され、カーソルの表示も標準のまま保存されます(図1-3)。</p>
+                            <p>　▼図1-3 読み取り専用のテキストを表示する</p>
+                            <div class="images">
+                                <img src="./images/form3.png" alt="form3">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-3　｜
+
+&lt;div class="container"&gt;
+    &lt;div class="mb-3"&gt;
+        &lt;label class="form-label" for="input1"&gt;読み取り専用のテキストを表示&lt;/label&gt;
+        &lt;input class="form-control" type="text" id="input1" value="読み取り専用のテキスト" readonly&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜チェックボックスとラジオボタン｜</h3>
+                            <p>　選択肢の中から複数項目の選択が可能なチェックボックスや、１項目のみ選択が可能なラジオボタンを作成する例を見てみましょう(図1-4)。</p>
+                            <p>　▼図1-4 チェックボックスとラジオボタン</p>
+                            <div class="images">
+                                <img src="./images/form4.png" alt="form4">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-4　｜
+
+&lt;div class="container"&gt;
+    &lt;!-- チェックボックス --&gt;
+    &lt;div class="form-check"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="check1"&gt;
+        &lt;label class="form-check-label" for="check1"&gt;
+            チェック1 (チェックなし)
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="check2" checked&gt;
+        &lt;label class="form-check-label" for="check2"&gt;
+            チェック2 (チェックあり)
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="check3"&gt;
+        &lt;label class="form-check-label" for="check3"&gt;
+            チェック3 (不確定)
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="check4" disabled&gt;
+        &lt;label class="form-check-label" for="check4"&gt;
+            チェック4 (無効)
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;!-- ラジオボタン --&gt;
+    &lt;div class="form-check"&gt;
+        &lt;input class="form-check-input" type="radio" name="radios" id="radios1" value="option1" checked&gt;
+        &lt;label class="form-check-label" for="radios1"&gt;
+            オプション1
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check"&gt;
+        &lt;input class="form-check-input" type="radio" name="radios" id="radios2" value="option2" checked&gt;
+        &lt;label class="form-check-label" for="radios2"&gt;
+            オプション2
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check"&gt;
+        &lt;input class="form-check-input" type="radio" name="radios" id="radios3" value="option3" disabled&gt;
+        &lt;label class="form-check-label" for="radios3"&gt;
+            オプション3 (無効)
+        &lt;/label&gt;
+    &lt;/div&gt;
+    ・・・中略・・・
+    &lt;script&gt;
+        let elem = document.querySelector('#check3');
+        elem.indeterminate = true;
+    &lt;/script&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜スイッチ状のチェックボックス｜</h3>
+                            <p>　form-checkクラスを指定した要素に、さらにform-switchクラスを追加すると、チェックボックスの外見がスイッチ状になります。スイッチ状の外見は、非チェック時・チェック時の他、不確定状態にも適用されます(図1-5)。</p>
+                            <p>　▼図1-5 スイッチ状のチェックボックス</p>
+                            <div class="images">
+                                <img src="./images/form5.png" alt="form5">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-5　｜
+
+&lt;div class="container"&gt;
+    &lt;div class="form-check form-switch"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="check1"&gt;
+        &lt;label class="form-check-label" for="check1"&gt;
+            チェック1 (デフォルト・チェックなし)
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check form-switch"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="check2" checked&gt;
+        &lt;label class="form-check-label" for="check2"&gt;
+            チェック2 (チェックあり)
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check form-switch"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="check3"&gt;
+        &lt;label class="form-check-label" for="check3"&gt;
+            チェック3 (不確定)
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check form-switch"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="check4" disabled&gt;
+        &lt;label class="form-check-label" for="check4"&gt;
+            チェック4 (無効・チェックなし)
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check form-switch"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="check5" checked disabled&gt;
+        &lt;label class="form-check-label" for="check4"&gt;
+            チェック5 (無効・チェックあり)
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check form-switch"&gt;
+        &lt;input class="form-check-input" type="checkbox" value="" id="check6" disabled&gt;
+        &lt;label class="form-check-label" for="check3"&gt;
+            チェック6 (無効・不確定)
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜選択項目を横並びに変更する｜</h3>
+                            <p>　選択項目を横並びのレイアウトに変更する場合は、form-checkクラスが設定されたdiv要素にform-check-inlineクラスを追加します(図1-6)。</p>
+                            <p>　▼図1-6 選択項目を横並びに変更する</p>
+                            <div class="images">
+                                <img src="./images/form6.png" alt="form6">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-6　｜
+
+&lt;div class="container"&gt;   
+    &lt;div class="form-check form-check-inline"&gt;
+        &lt;input class="form-check-input" type="checkbox" id="checkbox1" value="option1"&gt; 
+        &lt;label class="form-check-label" for="cheakbox1"&gt;1&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check form-check-inline"&gt;
+        &lt;input class="form-check-input" type="checkbox" id="checkbox2" value="option2"&gt;
+        &lt;label class="form-check-label" for="cheakbox2"&gt;2&lt;/label&gt;
+    &lt;/div&gt; 
+    &lt;div class="form-check form-check-inline"&gt; 
+        &lt;input class="form-check-input" type="checkbox" id="checkbox3" value="option3" disabled&gt; 
+        &lt;label class="form-check-label" for="cheakbox3"&gt;3&lt;/label&gt; 
+    &lt;/div&gt;    
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜プルダウンメニュー｜</h3>
+                            <p>　選択肢の中から１項目のみ、あるいは複数項目の選択が可能なプルダウンメニューを作成する例を見てみましょう(図1-7)。</p>
+                            <p>　▼図1-7 プルダウンメニュー</p>
+                            <div class="images">
+                                <img src="./images/form7.png" alt="form7">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-7　｜
+
+&lt;div class="container"&gt;   
+    &lt;!-- プルダウンメニュー --&gt;
+    &lt;select class="form-select" aria-label="プルダウンメニュー"&gt;
+        &lt;option selected&gt;選択してください&lt;/option&gt;
+        &lt;option value="1"&gt;1&lt;/option&gt;
+        &lt;option value="2"&gt;2&lt;/option&gt;
+        &lt;option value="3"&gt;3&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜プルダウンメニューのサイズを変更する｜</h3>
+                            <p>　プルダウンメニューのサイズを変更することもできます。プルダウンメニューのサイズを大きくする場合は、form-selectクラスが設定された要素にform-select-lgクラスを追加します。プルダウンメニューのサイズを小さくする場合はform-select-smクラスを追加します(図1-8)。</p>
+                            <p>　▼図1-8 プルダウンメニューのサイズを変更する</p>
+                            <div class="images">
+                                <img src="./images/form8.png" alt="form8">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-8　｜
+
+&lt;div class="container"&gt;
+    &lt;h4&gt;※大サイズのプルダウンメニュー&lt;/h4&gt;
+    &lt;form&gt;
+        &lt;select class="form-select form-select-lg"&gt;
+            &lt;option selected&gt;選択してください&lt;/option&gt;
+            &lt;option value="1"&gt;1&lt;/option&gt;
+            &lt;option value="2"&gt;2&lt;/option&gt;
+            &lt;option value="3"&gt;3&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/form&gt;
+    &lt;h4&gt;※標準サイズのプルダウンメニュー&lt;/h4&gt;
+    &lt;form&gt;
+        &lt;select class="form-select"&gt;
+            &lt;option selected&gt;選択してください&lt;/option&gt;
+            &lt;option value="1"&gt;1&lt;/option&gt;
+            &lt;option value="2"&gt;2&lt;/option&gt;
+            &lt;option value="3"&gt;3&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/form&gt;
+    &lt;h4&gt;※小サイズのプルダウンメニュー&lt;/h4&gt;
+    &lt;form&gt;
+        &lt;select class="form-select form-select-sm"&gt;
+            &lt;option selected&gt;選択してください&lt;/option&gt;
+            &lt;option value="1"&gt;1&lt;/option&gt;
+            &lt;option value="2"&gt;2&lt;/option&gt;
+            &lt;option value="3"&gt;3&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        
+                    </div>
+                    <a href="." class="btn">↑　PAGE TOP　↑</a>
+                </div>
+            </section>
+        </main>
+        
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <!-- ナビゲーション -->
+                    <ul class="nav justify-content-center mb-3">
+                        <a class="nav-link" href="https://line.me/ti/p/SCnETCzw4_">
+                            <i class="bi bi-line"></i>
+                        </a>
+                        <a class="nav-link" href="https://www.instagram.com/yuto14__.xx">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a class="nav-link" href="mailto:mansai-y2231@scholl.ac.jp">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                        <a class="nav-link" href="https://gist.github.com/yuto0914">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </ul>
+                    <!-- /ナビゲーション -->
+                    <p>
+                        <small class="footer__small">&copy; MANSAI YUTO</small>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- マウスポインターの設定コード -->
+        <div id="mouse-stalker"></div>
+
+        <!-- JavaScript -->
+	    <script src="./libs/jquery/jquery-3.6.1.min.js"></script>
+	    <script src="./libs/bootstrap/bootstrap.min.js"></script>
+	    <script src="./main.js"></script>
+    </body>
+</html>

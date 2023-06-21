@@ -1,0 +1,337 @@
+/*iPhoneおよび共通設定*/
+p{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 1.5;
+}
+.conatainer{
+    display: grid;
+    grid-template-columns: 100%;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.header h1{
+    font-size: 20px;
+    margin: 8px 0 14px 15px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 600;
+    color: #81A238;
+}
+.header ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 8px auto auto;
+    font-size: 10px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    width: 100px;
+    list-style: none;
+    color: #666;
+}
+.header ul a link{
+    color: inherit;
+    text-decoration: none;
+}
+.header ul a:hover{
+    color: red;
+}
+.TopPhoto img{
+    width: 100%;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+nav ul li{
+    background-color: #989595;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-bottom: 5px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.zukan{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, ifr);
+    background-color: #F5F0F0;
+    gap: 5px;
+    margin-top: 20px;
+    padding: 5px;
+}
+.zukan img{
+    width: 100%;
+}
+.zukan .zukan_title{
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+.zukan img.kogera{
+    grid-column: 3;
+    grid-row: 2 / 4;
+}
+.zukan .gojuukara,.zukan .fukurou,.zukan .kawasemi{
+    display: none;
+}
+p.next{
+    grid-column: 3;
+    text-align: right;
+    padding: 11px 5px;
+    color: #714646;
+}
+.news,.watching{
+    padding: 30px;
+}
+.h2{
+    font-size: 15px;
+    color: #6C4B4B;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 600;
+}
+.news_art{
+    display: grid;
+    grid-template-columns: 103px 1fr;
+    gap: 36px;
+    border-top: solid 1px #707070;
+    margin-top: 17px;
+    padding-top: 17px;
+}
+.news_title{
+    grid-column: 1;
+}
+.news_title .date{
+    font-size: 13px;
+}
+.news_title .name{
+    background-color: #989595;
+    text-align: center;
+    color: #fff;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.news_art .news_text{
+    grid-column: 2;
+}
+.more{
+    grid-column: 2;
+    text-align: right;
+    color: #714646;
+}
+.watching_art{
+    display: grid;
+    grid-template-columns: 124px 1fr;
+    gap: 36px;
+    margin-top: 17px;
+}
+.watching h2{
+    margin-bottom: 17px;
+}
+.watching_image{
+    width: 100%;
+    grid-row: 1 / 4;
+}
+.watching_title{
+    grid-column: 2;
+    font-size: 13px;
+    color: #8D8A8A;
+}
+.watching_text{
+    grid-column: 2;
+    margin-top: -20px;
+}
+.watching{
+    background-color: #F5F0F0;
+}
+.archive{
+    padding: 30px;
+    background-color: #F5F0F0;
+    margin-top: 30px;
+}
+.archive_art{
+    display: grid;
+    grid-template-columns: 101px 1fr;
+    gap: 30px;
+}
+.archive h2{
+    margin-bottom: 17px;
+}
+.archive_image{
+    grid-column: 1;
+}
+.archive_image img{
+    width: 100%;
+}
+.archive_title{
+    grid-column: 2;
+    font-size: 13px;
+    color: #8D8A8A;
+}
+.archive_text{
+    grid-column: 2;
+    margin-top: -80px;
+}
+.archive_art .more{
+    grid-column: 2;
+    margin-top: -80px;
+}
+.sns{
+    text-align: center;
+    padding: 30px;
+}
+.sns_logo{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    border-top: #707070 1px solid;
+    padding-top: 9.5px;
+    margin: 4.5px auto;
+}
+.sns_logo img{
+    width: 44px;
+}
+footer .footer_title{
+    background-color: #B4AEAE;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+.footer .footer_menu{
+    margin: 16px 46px;
+}
+.footer .footer_menu p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 2.5em;
+}
+
+/*iPadの設定*/
+@media screen and (min-width: 600px){
+
+.header h1{
+    font-size: 30px;
+    margin: 15px 0 15px 35px;
+}
+.header ul{
+    margin: 25px 49px auto auto;
+    font-size: 13px;
+    width: 25%;
+}
+nav ul{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.zukan .gojuukara,.zukan .fukurou,.zukan .kawasemi{
+    display: inline-block;
+}
+.zukan{
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.zukan .hayabusa{
+    grid-column: 1;
+    grid-row: 3;
+}
+.zukan .tobi{
+    grid-column: 2;
+    grid-row: 3;
+}
+.zukan .mukudori{
+    grid-column: 4;
+    grid-row: 1;
+}
+.zukan .tsubame{
+    grid-column: 5;
+    grid-row: 1;
+}
+.zukan .onaga{
+    grid-column: 4;
+    grid-row: 2;
+}
+.zukan .fukurou{
+    grid-column: 4;
+    grid-row: 3;
+}
+.news_watching{
+    display: grid;
+    padding: 40px;
+    grid-template-columns: 4fr 3fr;
+}
+.news{
+    grid-column: 1;
+}
+.watching{
+    grid-column: 2;
+}
+.news_art{
+    display: block;
+    border: none;
+}
+.news_title .name{
+    background: none;
+    text-align: left;
+    color: #716B6B;
+    padding: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.news_title .date{
+    font-size: 20px;
+    border-bottom: solid 1px #707070;
+    padding-bottom: 10px;
+}
+h2{
+    font-size: 24px;
+    color: #767373;
+}
+.watching{
+    background: none;
+}
+.watching_art{
+    gap: 0px 14px;
+}
+.watching_title{
+    grid-column: 1 / 3;
+    grid-row: 1;
+    font-size: 20px;
+    color: #4E4D4D;
+    margin-bottom: 8px;
+}
+.watching_image{
+    grid-row: 2;
+}
+.watching_text{
+    grid-row: 2;
+    margin-top: 0;
+}
+.archive{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.archive_data{
+    grid-column: 2;
+}
+.sns_logo{
+    width: 50%;
+}
+.footer{
+    background-color: #B4AEAE;
+}
+.footer_menu{
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+    width: 60%;
+}
+
+}

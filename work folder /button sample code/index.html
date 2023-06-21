@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>My Portfolio</title>
+	    <!-- CSS -->
+	    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+	    <link rel="stylesheet" href="./libs/bootstrap/carousel.css">
+	    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+	    <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <!-- header -->
+        <div class="wrapper"></div>
+        <header id="header">
+            <div class="container">
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid">
+                        <h1 class="header-logo">
+                            <a href=".">MY PORTFOLIO</a>
+                        </h1>
+                        <!-- Toggler -->
+                        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-control="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- Offcanvas -->
+                        <div class="offcanvas offcanvas-end" tagindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MY PORTFOLIO</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../alert sample code/index.html">ALERT WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../form sample code/index.html">FORM WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../table sample code/index.html">TABLE WORK</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="../web work/index.html">WEB WORK</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- /header -->
+
+        <main class="content">
+            <section class="main-inner" id="main-inner">
+                <div class="container">
+                    <div class="area1">
+                        <div class="group1">
+                            <h1 class="title1">基本的なコンポーネントについて　〜ボタン〜</h1>
+                            <p>　Bootstrapにはさまざまなサイズ、状態のボタンがコンポーネントとして用意されており、定義済みクラスを要素に追加するだけで洗練されたUIを実装することができます。</p>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜button要素でボタンを作成する｜</h3>
+                            <p>　次の例では、button要素にbtnクラスとbtn-{色の種類}クラスを追加してボタンを作成しています(図1-1)。</p>
+                            <p>　▼図1-1 ボタンの基本的な使用例</p>
+                            <div class="images">
+                                <img src="./images/button1.png" alt="button1">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-1　｜
+
+&lt;div class="container"&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;btn-primary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;btn-secondary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-success"&gt;btn-success&lt;/button&gt;
+    &lt;button type="button" class="btn btn-danger"&gt;btn-danger&lt;/button&gt;
+    &lt;button type="button" class="btn btn-warning"&gt;btn-warning&lt;/button&gt;
+    &lt;button type="button" class="btn btn-info"&gt;btn-info&lt;/button&gt;
+    &lt;button type="button" class="btn btn-light"&gt;btn-light&lt;/button&gt;
+    &lt;button type="button" class="btn btn-dark"&gt;btn-dark&lt;/button&gt;
+    &lt;button type="button" class="btn btn-link"&gt;btn-link&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜a要素やinput要素でボタンを作成する｜</h3>
+                            <p>　ボタンのコンポーネントは、button要素にクラスを追加して作成するように設計されていますが、a要素やinput要素で作成することもできます。ただし、ブラウザによって若干異なるレンダリングが適用されることがあります。次の例では、a要素とinput要素にbtnクラスとbtn-{色の種類}クラスを追加してボタンを作成しています。a要素でボタンを作成するには、アクセシビリティへの配慮として属性role="button"を追加し、スクリーンリーダーなどの支援技術にこのコンポーネントの役割がボタンであることを伝えましょう(図1-2)。</p>
+                            <p>　▼図1-2 a要素やinput要素でボタンを作成する</p>
+                            <div class="images">
+                                <img src="./images/button2.png" alt="button2">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-2　｜
+
+&lt;div class="container"&gt;
+    &lt;a class="btn btn-primary" href="#" role="button"&gt;a要素ボタン&lt;/a&gt;
+    &lt;input class="btn btn-primary" type="button" value="inputボタン"&gt;
+    &lt;input class="btn btn-primary" type="submit" value="submitボタン"&gt;
+    &lt;input class="btn btn-primary" type="reset" value="resetボタン"&gt;                     
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜アウトラインボタンを作成する｜</h3>
+                            <p>　背景色のないアウトラインで表現されたボタンを作成する場合は、ボタンの要素に設定されたbtn-{色の種類}クラスをbtn-outline-{色の種類}クラスに置き換えます。(図1-3)背景色の設定のないアウトラインボタンは、背景画像がある場合でも邪魔になりにくいデザインです。</p>
+                            <p>　▼図1-3 アウトラインボタンを作成する</p>
+                            <div class="images">
+                                <img src="./images/button3.png" alt="button3">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-3　｜
+
+&lt;div class="container"&gt;
+    &lt;button type="button" class="btn btn-outline-primary"&gt;outline-primary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-secondary"&gt;outline-secondary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-success"&gt;outline-success&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-danger"&gt;outline-danger&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-warning"&gt;outline-warning&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-info"&gt;outline-info&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-light"&gt;outline-light&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-dark"&gt;outline-dark&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+                        </div>    
+
+                        <div class="group2">
+                            <h3 class="title2">｜ボタンサイズを変更する｜</h3>
+                            <p>　ボタンのサイズを大きくする場合は、ボタンの要素にbtn-lgクラスを追加します。小さくする場合はbtn-smクラスを追加します(図1-4)。</p>
+                            <p>　▼図1-4 ボタンサイズを変更する</p>
+                            <div class="images">
+                                <img src="./images/button4.png" alt="button4">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-4　｜
+
+&lt;div class="container"&gt;
+    &lt;button class="btn btn-primary btn-lg"&gt;大サイズ&lt;/button&gt;
+    &lt;button class="btn btn-primary"&gt;通常サイズ&lt;/button&gt;
+    &lt;button class="btn btn-primary btn-sm"&gt;小サイズ&lt;/button&gt;                          
+&lt;/div&gt;</code></pre>
+                            
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜ブロックレベルのボタンを作成する｜</h3>
+                            <p>親要素の全幅にまたがるブロックレベルのボタンを作成するには、ボタン要素をd-gridクラスとgap-*クラスを追加したdiv要素で囲みます(図1-5)。gap-*クラスは、ボタンが縦に並ぶ場合に、その間隔を指定します。追加しないと間隔が0になり、ボタン同士がくっつきます。</p>
+                            <p>▼図1-5 ブロックレベルのボタンを作成する</p>
+                            <div class="images">
+                                <img src="./images/button5.png" alt="button5">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-5　｜
+
+&lt;div class="container"&gt;
+    &lt;div class="d-grid gap-2"&gt;
+        &lt;button class="btn btn-primary btn-lg"&gt;ブロックレベルボタン1&lt;/button&gt;
+        &lt;button class="btn btn-primary btn-lg"&gt;ブロックレベルボタン2&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                            
+                        <div class="group2">
+                            <h3 class="title2">｜アクティブ状態のボタンを作成する｜</h3>
+                            <p>　ボタンにアクティブな状態の外観を強制的に作成する場合は、ボタンの要素にactiveクラスを追加します。また、アクセシビリティへの配慮として属性aria-pressed="true"を追加し、スクリーンリーダーなどの支援技術にこのボタンがアクティブな状態であることを伝えましょう(図1-6)。</p>
+                            <p>▼図1-6 アクティブ状態のボタンを作成する</p>
+                            <div class="images">
+                                <img src="./images/button6.png" alt="button6">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-6　｜
+&lt;div class="container"&gt; 
+    &lt;a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressrd="true"&gt;アクティブボタン&lt;/a&gt;
+    &lt;a href="#" class="btn btn-primary btn-lg" role="button"&gt;通常ボタン&lt;/a&gt;                               
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="group2">
+                            <h3 class="title2">｜無効状態のボタンを作成する｜</h3>
+                            <p>　クリックできない無効な状態のボタンを作成する場合は、ボタンの要素にdisabled属性を追加します(図1-7)。</p>
+                            <p>▼図1-7 無効状態のボタンを作成する</p>
+                            <div class="images">
+                                <img src="./images/button7.png" alt="button7">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-7　｜
+
+&lt;div class="container"&gt;
+    &lt;button type="button" class="btn btn-lg btn-primary" disabled&gt;無効ボタン&lt;/button&gt;
+    &lt;button type="button" class="btn btn-lg btn-primary"&gt;通常ボタン&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                            
+                        <div class="group2">
+                            <h3 class="title2">｜a要素で無効状態のボタンを作成する｜</h3>
+                            <p>　ただし、a要素はdisabled属性をサポートしていません。そのため、a要素で無効な状態のボタンを作成する場合は、ボタンの要素にdisabledクラスを追加します。また、アクセシビリティへの配慮として属性aria-disabled="true"を追加し、スクリーンリーダーなどの支援技術にこのボタンが無効な状態であることを伝えます(図1-8)。</p>
+                            <p>▼図1-8 a要素で無効状態のボタンを作成する</p>
+                            <div class="images">
+                                <img src="./images/button8.png" alt="button8">
+                            </div>
+                            <pre><code>｜　HTMLサンプルコード 1-8　｜
+
+&lt;div class="container"&gt;
+    &lt;a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true"&gt;無効ボタン&lt;/a&gt;
+    &lt;a href="#" class="btn btn-primary btn-lg" role="button"&gt;通常ボタン&lt;/a&gt;
+&lt;/div&gt;
+</pre></code>
+                        </div>
+
+                    </div>
+                    <a href="." class="btn">↑　PAGE TOP　↑</a>
+                </div>
+            </section>
+        </main>
+        
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <!-- ナビゲーション -->
+                    <ul class="nav justify-content-center mb-3">
+                        <a class="nav-link" href="https://line.me/ti/p/SCnETCzw4_">
+                            <i class="bi bi-line"></i>
+                        </a>
+                        <a class="nav-link" href="https://www.instagram.com/yuto14__.xx">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a class="nav-link" href="mailto:mansai-y2231@scholl.ac.jp">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                        <a class="nav-link" href="https://gist.github.com/yuto0914">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </ul>
+                    <!-- /ナビゲーション -->
+                    <p>
+                        <small class="footer__small">&copy; MANSAI YUTO</small>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- マウスポインターの設定コード -->
+        <div id="mouse-stalker"></div>
+
+        <!-- JavaScript -->
+	    <script src="./libs/jquery/jquery-3.6.1.min.js"></script>
+	    <script src="./libs/bootstrap/bootstrap.min.js"></script>
+	    <script src="./main.js"></script>
+    </body>
+</html>
